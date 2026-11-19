@@ -1104,4 +1104,5 @@
 
   <include name="snippets/derp.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/lemonadep.xml" />
 </manifest>

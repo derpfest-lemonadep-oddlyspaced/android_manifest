@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- OnePlus 9 Pro (lemonadep) sources -->
+  <remote name="lemonadep"
+          fetch="https://github.com/derpfest-lemonadep-oddlyspaced"
+          revision="17" />
+
+  <!-- frameworks/base: DerpFest 17 + lemonadep fixes -->
+  <remove-project name="android_frameworks_base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="lemonadep" />
+
+  <!-- Device trees -->
+  <project path="device/oneplus/lemonadep" name="android_device_oneplus_lemonadep" remote="lemonadep" clone-depth="1" />
+  <project path="device/oneplus/sm8350-common" name="android_device_oneplus_sm8350-common" remote="lemonadep" clone-depth="1" />
+
+  <!-- Kernel (KernelSU is a git submodule) -->
+  <project path="kernel/oneplus/sm8350" name="android_kernel_oneplus_sm8350" remote="lemonadep" clone-depth="1" sync-s="true" />
+
+  <!-- Hardware -->
+  <project path="hardware/oplus" name="android_hardware_oplus" remote="lemonadep" clone-depth="1" />
+  <project path="hardware/oneplus" name="android_hardware_oneplus" remote="lemonadep" clone-depth="1" />
+  <project path="hardware/pixelworks/interfaces" name="android_hardware_pixelworks_interfaces" remote="lemonadep" clone-depth="1" />
+
+  <!-- ViPER4AndroidFX (inherited by sm8350-common) -->
+  <project path="packages/apps/ViPER4AndroidFX" name="packages_apps_ViPER4AndroidFX" remote="lemonadep" clone-depth="1" />
+
+  <!-- Proprietary blobs -->
+  <project path="vendor/oneplus/lemonadep" name="proprietary_vendor_oneplus_lemonadep" remote="lemonadep" clone-depth="1" />
+  <project path="vendor/oneplus/sm8350-common" name="proprietary_vendor_oneplus_sm8350-common" remote="lemonadep" clone-depth="1" />
+</manifest>
